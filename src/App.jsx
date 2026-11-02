@@ -1,36 +1,37 @@
-import { useState } from 'react'
 import './App.css'
 
 function App() {
   const szinek = [
-  {
-    nev: 'Pink',
-    rgbID: '#FFC0CB',
-
-  },
-  {
-    nev: 'Yellow',
-    rgbID: '#FFFF00',
-
-  },
-  {
-    nev: 'Red',
-    rgbID: '#FF0000',
-
-  },
-  {
-    nev: 'Black',
-    rgbID: '#000000',
-  },
-  {
-    nev: 'White',
-    rgbID: '#FFFFFF',
-  }
-]
+    {
+      nev: 'Rózsaszín',
+      rgbID: '#FFC0CB',
+    },
+    {
+      nev: 'Sarga',
+      rgbID: '#FFFF00',
+    },
+    {
+      nev: 'Piros',
+      rgbID: '#FF0000',
+    },
+    {
+      nev: 'Fekete',
+      rgbID: '#000000',
+    },
+    {
+      nev: 'Fehér',
+      rgbID: '#FFFFFF',
+    },
+  ]
   return (
-    <>
-
-    </>
+    <main>
+      <select>
+        {szinek.map((szin) => (
+          <option key={szin.nev} value={szin.rgbID}> {szin.nev}
+          </option>
+        ))}
+      </select>
+    </main>
   )
 }
 
