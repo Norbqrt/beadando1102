@@ -30,7 +30,7 @@ function App() {
     <main>
       <select
         value={kivszin} onChange={(event) => setkivszin(event.target.selectedIndex)}>
-        {szinek.map((szin, index) => (  <option key={szin.nev} value={index}> {szin.nev}   </option>
+        {szinek.map((szin, index) => (<option key={szin.nev} value={index}> {szin.nev}</option>
         ))}
       </select> <p>{szinek[kivszin].nev}</p>
       <div class="panel" style={{ backgroundColor: szinek[kivszin].rgbID }} />
