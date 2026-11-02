@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 
 function App() {
@@ -23,14 +24,16 @@ function App() {
       rgbID: '#FFFFFF',
     },
   ]
+  const [kivszin, setkivszin] = useState(0)
+
   return (
     <main>
-      <select>
-        {szinek.map((szin) => (
-          <option key={szin.nev} value={szin.rgbID}> {szin.nev}
-          </option>
+      <select
+        value={kivszin} onChange={(event) => setkivszin(event.target.selectedIndex)}>
+        {szinek.map((szin, index) => (  <option key={szin.nev} value={index}> {szin.nev}   </option>
         ))}
-      </select>
+      </select> <p>{szinek[kivszin].nev}</p>
+      <div class="panel" style={{ backgroundColor: szinek[kivszin].rgbID }} />
     </main>
   )
 }

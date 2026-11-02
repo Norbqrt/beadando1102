@@ -9,3 +9,7 @@ main{
 body{
     background-color: lightgrey;
 }
+
+.panel{
+    height: 300px;
+}
