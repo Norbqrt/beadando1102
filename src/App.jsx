@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Panel from './Panel'
 
 function App() {
   const szinek = [
@@ -33,7 +34,7 @@ function App() {
         {szinek.map((szin, index) => (<option key={szin.nev} value={index}> {szin.nev}</option>
         ))}
       </select> <p>{szinek[kivszin].nev}</p>
-      <div class="panel" style={{ backgroundColor: szinek[kivszin].rgbID }} />
+      <Panel szin={szinek[kivszin].rgbID} />
     </main>
   )
 }
